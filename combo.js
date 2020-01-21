@@ -1,32 +1,23 @@
 console.log("Combos!")
 
-const evenOdd = (nums) =>{
-    if (nums%2 == 0)
-    return true;
-    else {
-        return false;
-    }
+const isEven = num => ((num % 2) == 0) ? true : false;
+
+console.log(isEven(10));
+console.log(isEven(11));
+
+const negative = (number) => {
+    return(-number);
 }
 
-const nums = 8;
+console.log(negative(27));
 
-const opposite = (num) =>{
-    console.log(-num);
+const checkPalindrome = str => {
+    str = str.toLowerCase();
+    return str == str.split('').reverse().join('');
 }
 
-const num = 17;
-
-palindrome = (word) => {
-    let strLen = word.length;
-    word = word.toLocaleLowerCase();
-
-    if (strLen === 0 || strLen === 1) {
-        return true;
-    }
-    if (word[0] === word[strLen - 1]) {
-        return palindrome(word.slice(1, strLen -1) );
-    }
-    return false;
-};
-
-const word = (racecar);
+if(checkPalindrome('skyward')){
+    console.log('Palindrome');
+} else {
+    console.log('Not Palindrome');
+}
