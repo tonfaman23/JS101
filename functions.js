@@ -16,3 +16,15 @@ const dogBreed = (breed) => {
 };
 
 console.log(dogBreed('lab'));
+
+const fortyTwo = (number) => {
+    return number + 42
+}
+
+console.log(fortyTwo(22));
+
+const oldAge = (birthYear) => {
+    return `2099`-`${birthYear}`
+}
+
+console.log(oldAge('1992'));
