@@ -10,14 +10,46 @@ const negative = (number) => {
 }
 
 console.log(negative(27));
+console.log(negative(-2));
 
-const checkPalindrome = str => {
-    str = str.toLowerCase();
-    return str == str.split('').reverse().join('');
+//const checkPalindrome = text => {
+    //text = text.toLowerCase();
+    //return text == text.split('').reverse().join('');
+//}
+
+//if(checkPalindrome('skyward')){
+    //console.log('Palindrome');
+//} else {
+    //console.log('Not Palindrome');
+//}
+
+const palindromeCheck = (text) => {
+    const cleanText = text.toLowerCase().replace(' ', '');
+    const opp = cleanText.split('').reverse().join('');
+    console.log('text', cleanText);
+    console.log('opp', opp);
+    if (cleanText == opp) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
-if(checkPalindrome('skyward')){
-    console.log('Palindrome');
-} else {
-    console.log('Not Palindrome');
-}
+console.log('palindrome', palindromeCheck('cat'));
+console.log('palindrome', palindromeCheck('bear'));
+console.log('palindrome', palindromeCheck('race car'));
+console.log('palindrome', palindromeCheck('poop'));
+
+
+const animal = (str) => {
+    if(str.toLowerCase() === 'alligator'){
+        return 'small';
+    }
+    else{
+        return 'wide';
+    }
+};
+
+console.log(animal('alligator'));
+console.log(animal('fish'));
+console.log(animal('ALLiGator'))
